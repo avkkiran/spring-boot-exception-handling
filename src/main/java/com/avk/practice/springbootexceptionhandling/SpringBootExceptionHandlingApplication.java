@@ -2,12 +2,11 @@ package com.avk.practice.springbootexceptionhandling;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
-@ComponentScan({ "com.controller", "com.service", "com.exceptionhandling" })
-@EntityScan({ "com.models" })
+//@SpringBootApplication(scanBasePackages= {"com.controller", "com.service", "com.exceptionhandling", "com.models"})
+@SpringBootApplication(scanBasePackages= {"com.*"})
+//@ComponentScan({ "com.controller", "com.service", "com.exceptionhandling" })
+//@EntityScan({ "com.models" })
 public class SpringBootExceptionHandlingApplication {
 
 	public static void main(String[] args) {

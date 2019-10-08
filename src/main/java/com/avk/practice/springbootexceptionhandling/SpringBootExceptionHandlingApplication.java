@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({ "com.controller", "com.service" })
+@ComponentScan({ "com.controller", "com.service", "com.exceptionhandling" })
 @EntityScan({ "com.models" })
 public class SpringBootExceptionHandlingApplication {
 

@@ -2,6 +2,8 @@ package com.exceptionhandling;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -10,7 +12,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import com.exception.ResourceNotFoundException;
 import com.models.ExceptionResponse;
 
+@Order(Ordered.HIGHEST_PRECEDENCE)
 @RestControllerAdvice
+//@Order(Ordered.LOWEST_PRECEDENCE)
 //@ControllerAdvice
 public class ExceptionHandlerRestControllerAdvice {
 	
